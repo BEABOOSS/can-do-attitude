@@ -1,0 +1,37 @@
+header
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 80px;
+	background-color: var(--red);
+	z-index: 99;
+}
+
+#header, 
+#header nav,
+#header ul,
+#header li
+{
+	height: 80px;
+}
+
+#header li
+{
+	color:white;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;	
+}
+
+#header a
+{
+	color:#fff;
+}
