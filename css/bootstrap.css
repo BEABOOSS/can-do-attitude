@@ -6,14 +6,85 @@
 	list-style:none;
 	text-decoration:none;
 	--red: #ff0000;
+    --green: #00ff00;
 }
 
 .first-section
 {
-	margin-top: 80px;
+    position:absolute;
+	top:80px;
+    width:100vw;
 	min-height: calc(100vh - 80px);
 	border: 2px solid black;
 }
+
+fieldset
+{
+    border:none;
+    margin:20px;
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:10% 90%;
+    grid-template-columns:10% 90%;      
+}
+
+fieldset label
+{
+    padding-right:10px;
+    text-transform:uppercase;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;    
+}
+
+fieldset input
+{
+    height:30px;
+    border:2px solid #000;
+    border-radius:5px;
+    padding: 0 5px;
+}
+
+.item 
+{
+    border:1px solid #333;
+    padding:10px;
+    margin:10px 0;
+}
+
+.rb{border:1px solid red;}
+.gb{border:1px solid green;}
+.bb{border:1px solid blue;}
+
+/************************************************************************/
+/****************************** CONTAINERS ******************************/
+/************************************************************************/
+.container-90{width:90%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-80{width:80%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-70{width:70%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-60{width:60%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-50{width:50%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-40{width:40%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-30{width:30%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-20{width:20%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-10{width:10%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+/************************************************************************/
+/****************************** CONTAINERS ******************************/
+/************************************************************************/
+
+/*********************************************************************/
+/****************************** MARGINS ******************************/
+/*********************************************************************/
+.mtb-20{margin-top:20px;margin-bottom:20px;}
+/*********************************************************************/
+/****************************** MARGINS ******************************/
+/*********************************************************************/
 
 /******************************************************************/
 /****************************** FLEX ******************************/
@@ -1235,3 +1306,45 @@
 }
 /******************************************************************/
 /****************************** GRID ******************************/
+/******************************************************************/
+
+/*********************************************************************/
+/****************************** BUTTONS ******************************/
+/*********************************************************************/
+.btn
+{
+	padding:10px 15px;
+	color:#fff;
+	border:1px solid black;
+	border-radius:5px;
+}
+
+.btn-primary
+{
+    background-color:var(--red);
+}
+
+.btn-secondary
+{
+    background-color:var(--green);
+}
+/*********************************************************************/
+/****************************** BUTTONS ******************************/
+/*********************************************************************/
+.custom-select 
+{
+    height: 30px;
+    width: auto;
+    min-width: 300px;
+    font-size: 16px;
+    padding-left: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 1.0);
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: url('../images/caret.png');
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
+    background-position: 100% 0px;
+}

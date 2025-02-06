@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if(!isset($_SERVER['HTTPS']) or $_SERVER['HTTPS'] == 'off')
+            define('BASE','http://'.$_SERVER['HTTP_HOST'].'/');
+        else
+            define('BASE', 'https://'.$_SERVER['HTTP_HOST'].'/');
     }
 }
