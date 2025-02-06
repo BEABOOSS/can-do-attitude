@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Customer;
 use View;
 use Redirect;
+use Session;
 
 class CustomerController extends Controller
 {
@@ -58,6 +59,20 @@ class CustomerController extends Controller
 		$Make->update($request->all());
 
 		return Redirect::to('administration/customers');
+	}
+
+	public function setCustomerId(Request $request)
+	{
+		$Customer = Customer::find($request->id);
+
+
+		Session::put('CustomerId', $request->id);
+		Session::put('Customer', $Customer->toArray());
+
+
+		echo '1';
+
+
 	}		    
 }
 

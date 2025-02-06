@@ -115,6 +115,16 @@ class Field extends Model
          
          echo $select;
 
+      } else if ($info['type'] == 'button'){
+
+         // $button = '<fieldset>'
+
+         // $button .= '<div><a href="administration/' . $this->model . '/' . $this->id . '/edit"><button class="btn btn-secondary">EDIT</button></a></div>'; 
+
+         // $button .= '</fieldset>'
+
+         // return $button;
+
       }
 
      

@@ -24,8 +24,8 @@ fieldset
     margin:20px;
     display:-ms-grid;
     display:grid;
-    -ms-grid-columns:10% 90%;
-    grid-template-columns:10% 90%;      
+    -ms-grid-columns:30% 70%;
+    grid-template-columns:30% 70%;      
 }
 
 fieldset label
@@ -1343,7 +1343,7 @@ fieldset input
     background-color: rgba(255, 255, 255, 1.0);
     border: 2px solid #000;
     border-radius: 5px;
-    background-color: url('../images/caret.png');
+    background-image: url('../images/caret.png');
     background-repeat: no-repeat;
     background-size: 27px 27px;
     background-position: 100% 0px;

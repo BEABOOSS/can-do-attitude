@@ -29,4 +29,6 @@ Route::get('levels',[LevelController::class,'index'])->name('levels');
 Route::get('level/books/{id}',[LevelController::class,'levelBooks']);
 
 
+
 @include('resources.php');
+@include('posts.php');

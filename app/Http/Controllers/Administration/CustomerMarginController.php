@@ -8,6 +8,8 @@ use App\Models\CustomerMargin;
 use App\Models\Customer;
 use View;
 use Redirect;
+use Session;
+
 
 class CustomerMarginController extends Controller
 {
@@ -27,9 +29,20 @@ class CustomerMarginController extends Controller
 	public function index()
 	{
 
+		// echo 'CUSTOMER ID:' . Session::get('CustomerId') . '<br>';
+
+		// $CustomerMargins = CustomerMargin::where('customer_id', Session::get('CustomerId'))->get();
+		// foreach ($CustomerMargins as $CustomerMargin)
+		// {
+		// 	print_r( $CustomerMargin->toArray() );
+		// 	echo '<br><br>';
+		// }
+
+		// die();
+
 
 		View::share('title', 'Customer Margin');
-		View::share('Items', CustomerMargin::select( $this->select )->get());
+		View::share('Items', CustomerMargin::where('customer_id', Session::get('CustomerId') )->select( $this->select )->get());
 		
 		return view ('administration.items');
 	}
