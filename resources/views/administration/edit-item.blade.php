@@ -4,7 +4,6 @@
 
 <section class="first-section flx-cc">
 
-	<div>
 
 
 
@@ -14,16 +13,15 @@
 			{!! method_field('PUT')!!}
 
 @foreach($Fields as $FieldName => $FieldInfo)
-	
+
 			{!! App\Models\Field::createField($FieldName, $FieldInfo, $Item->$FieldName ) !!}
-		
+
 @endforeach
 
 			<div class="flx-cc"><button class="btn btn-primary">UPDATE</button></div>
 		</form>
 
-	</div>
 
 </section>
 
-@endsection 
+@endsection

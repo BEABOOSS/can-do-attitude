@@ -14,6 +14,6 @@ class AdministrationController extends Controller
 		View::share('title', 'Administration');
 		return view ('administration.administration');
 	}
-	
-    
+
+
 }

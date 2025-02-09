@@ -16,7 +16,11 @@ class CarController extends Controller
 
 	public function index()
 	{
-		//cho 'INDEX';
+		//$Cars = Car::active();
+		//foreach($Cars as $Car)
+		//{
+		//	echo $Car->Make->make . ' ' .  $Car->brand . '<br>';
+		//}
 		//die();
 
 		View::share('title', 'Cars');
@@ -26,7 +30,7 @@ class CarController extends Controller
 		View::share('Fields', Car::Fields());
 		return view ('administration.items');
 	}
-	
+
 	public function create()
 	{
 		View::share('title', 'Add Car');
@@ -39,7 +43,7 @@ class CarController extends Controller
 
 	public function store(Request $request)
 	{
-		Car::create($request->all());		
+		Car::create($request->all());
 
 		return Redirect::to('administration/cars');
 	}
@@ -73,6 +77,6 @@ class CarController extends Controller
 
 
 		return Redirect::to('administration/cars');
-	}		    
+	}
 }
 

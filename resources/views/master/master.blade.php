@@ -18,6 +18,8 @@
 	    <ul class="flx-se">
 		    <li><a href="{{route('home')}}">Home</a></li>
 			<li><a href="{{route('service')}}">Service</a></li>
+			<li><a href="{{route('books')}}">books</a></li>
+			<li><a href="{{route('levels')}}">levels</a></li>
 			<li><a href="">Contact Us</a></li>
 			<li><a href="{{route('administration')}}">Administration</a></li>
 		   

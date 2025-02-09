@@ -26,41 +26,41 @@ class Service extends BaseModel
 	{
 		//echo app()->getLocale();
 		//die();
-		
+
 		if ( app()->getLocale() == 'en' )
 			return $this->service;
 		else
 			return $this->service_fr;
 	}
-	
+
 	public static function Fields()
 	{
-	   return array('service' 			=> ['type' 		  => 'input', 
+	   return array('service' 			=> ['type' 		  => 'input',
 											'label' 	  => 'service',
 											'placeholder' => 'Enter a service',
 											'obligatory'  => 'obligatory',
 											'class' 	  => 'must-have-value'],
-	   
-					'service_fr' 		=> ['type'    	  => 'input', 
+
+					'service_fr' 		=> ['type'    	  => 'input',
 											'label'  	  => 'service',
 											'placeholder' => 'Enter a french service',
 											'obligatory'  => 'obligatory',
 											'class' 	  => 'must-have-value'],
-									
-									
-					'description' 		=> ['type'    	  => 'textarea', 
+
+
+					'description' 		=> ['type'    	  => 'textarea',
 											'label'  	  => 'description',
 											'placeholder' => 'Enter a description',
 											'obligatory'  => 'obligatory',
 											'class' 	  => 'must-have-value'],
-									
-	                'description_fr' 	=> ['type'    	  => 'textarea', 
+
+	                'description_fr' 	=> ['type'    	  => 'textarea',
 											'label'  	  => 'description',
 											'placeholder' => 'Enter a french +description',
 											'obligatory'  => 'obligatory',
-											'class' 	  => 'must-have-value'],			    
-	   
-					'active' 			=> ['type' 	 	  => 'boolean', 
+											'class' 	  => 'must-have-value'],
+
+					'active' 			=> ['type' 	 	  => 'boolean',
 											'label' 	  => 'active',
 											'text' 		  => 'active',
 											'default' 	  => '1',
@@ -68,5 +68,5 @@ class Service extends BaseModel
 											'class' 	  => 'must-have-value']);
    }
 
-   
+
 }

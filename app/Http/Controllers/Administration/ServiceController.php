@@ -18,12 +18,12 @@ class ServiceController extends Controller
 	{
 		View::share('title', 'Services');
 		View::share('model', $this->model);
-		View::share('models', $this->models);		
+		View::share('models', $this->models);
 		View::share('Items', Service::select( $this->select )->get());
 		View::share('Fields', Service::Fields());
 		return view ('administration.items');
 	}
-	
+
 	public function create()
 	{
 		View::share('title', 'Add Service');
@@ -36,7 +36,7 @@ class ServiceController extends Controller
 
 	public function store(Request $request)
 	{
-		Service::create($request->all());		
+		Service::create($request->all());
 
 		return Redirect::to('administration/services');
 	}
@@ -44,6 +44,6 @@ class ServiceController extends Controller
 	public function update()
 	{
 
-	}		    
+	}
 }
 

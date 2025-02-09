@@ -35,3 +35,15 @@ header
 {
 	color:#fff;
 }
+
+.book,
+.level
+{
+	border: 2px solid black;
+	margin: 10px 0;
+	padding: 10px;
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;    
+}

@@ -13,6 +13,7 @@
 {
     position:absolute;
 	top:80px;
+    width:100vw;
 	min-height: calc(100vh - 80px);
 	border: 2px solid black;
 }
@@ -23,22 +24,67 @@ fieldset
     margin:20px;
     display:-ms-grid;
     display:grid;
-    -ms-grid-columns:10% 90%;
-    grid-template-columns:10% 90%;      
+    -ms-grid-columns:30% 70%;
+    grid-template-columns:30% 70%;
 }
 
 fieldset label
 {
+    padding-right:10px;
     text-transform:uppercase;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;
 }
+
+fieldset input
+{
+    height:30px;
+    border:2px solid #000;
+    border-radius:5px;
+    padding: 0 5px;
+}
+
+.item
+{
+    border:1px solid #333;
+    padding:10px;
+    margin:10px 0;
+}
+
+.rb{border:1px solid red;}
+.gb{border:1px solid green;}
+.bb{border:1px solid blue;}
 
 /************************************************************************/
 /****************************** CONTAINERS ******************************/
 /************************************************************************/
-.container-90{width:90vw;margin-left:5vw;margin-right:5vw;border:2px solid #000;border-radius:10px}
+.container-90{width:90%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-80{width:80%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-70{width:70%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-60{width:60%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-50{width:50%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-40{width:40%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-30{width:30%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-20{width:20%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
+.container-10{width:10%;margin:auto;padding:20px;border:2px solid #000;border-radius:10px;}
 /************************************************************************/
 /****************************** CONTAINERS ******************************/
 /************************************************************************/
+
+/*********************************************************************/
+/****************************** MARGINS ******************************/
+/*********************************************************************/
+.mtb-20{margin-top:20px;margin-bottom:20px;}
+/*********************************************************************/
+/****************************** MARGINS ******************************/
+/*********************************************************************/
 
 /******************************************************************/
 /****************************** FLEX ******************************/
@@ -56,7 +102,7 @@ fieldset label
     display:-ms-flexbox;
     display:flex;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;    
+    flex-wrap:wrap;
 }
 
 .flx-s
@@ -79,10 +125,10 @@ fieldset label
     align-items:flex-start;
     -webkit-box-pack:start;
     -ms-flex-pack:start;
-    justify-content:flex-start;    
+    justify-content:flex-start;
 }
 
-.flx-sc 
+.flx-sc
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -107,7 +153,7 @@ fieldset label
     -ms-flex-pack:center;
     justify-content:center;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;    
+    flex-wrap:wrap;
 }
 
 .flx-start-end
@@ -135,7 +181,7 @@ fieldset label
     -ms-flex-pack:end;
     justify-content:flex-end;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;    
+    flex-wrap:wrap;
 }
 
 .flx-c
@@ -148,7 +194,7 @@ fieldset label
     align-items:center;
 }
 
-.flx-cs 
+.flx-cs
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -173,10 +219,10 @@ fieldset label
     -ms-flex-pack:start;
     justify-content:flex-start;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap  
+    flex-wrap:wrap
 }
 
-.flx-cc 
+.flx-cc
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -214,10 +260,10 @@ fieldset label
     -ms-flex-pack:center;
     justify-content:center;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap      
+    flex-wrap:wrap
 }
 
-.flx-ce 
+.flx-ce
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -242,7 +288,7 @@ fieldset label
     -ms-flex-pack:end;
     justify-content:flex-end;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;     
+    flex-wrap:wrap;
 }
 
 .flx-e
@@ -265,7 +311,7 @@ fieldset label
     align-items:end;
     -webkit-box-pack:start;
     -ms-flex-pack:start;
-    justify-content:flex-start;    
+    justify-content:flex-start;
 }
 
 .flx-es-wrp
@@ -278,12 +324,12 @@ fieldset label
     align-items:end;
     -webkit-box-pack:start;
     -ms-flex-pack:start;
-    justify-content:flex-start; 
+    justify-content:flex-start;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;       
+    flex-wrap:wrap;
 }
 
-.flx-ec 
+.flx-ec
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -308,10 +354,10 @@ fieldset label
     -ms-flex-pack:center;
     justify-content:center;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;    
+    flex-wrap:wrap;
 }
 
-.flx-ee 
+.flx-ee
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -336,10 +382,10 @@ fieldset label
     -ms-flex-pack:end;
     justify-content:flex-end;
     -ms-flex-wrap:wrap;
-    flex-wrap:wrap;     
+    flex-wrap:wrap;
 }
 
-.flx-sb 
+.flx-sb
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -349,7 +395,7 @@ fieldset label
     justify-content:space-between;
 }
 
-.flx-sb-wrp 
+.flx-sb-wrp
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -370,7 +416,7 @@ fieldset label
     justify-content:space-around;
 }
 
-.flx-sa-wrp 
+.flx-sa-wrp
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -381,7 +427,7 @@ fieldset label
     flex-wrap:wrap;
 }
 
-.flx-se 
+.flx-se
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -391,7 +437,7 @@ fieldset label
     justify-content:space-evenly;
 }
 
-.flx-se-wrp 
+.flx-se-wrp
 {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -494,7 +540,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:10% 90%;
-    grid-template-columns:10% 90%;    
+    grid-template-columns:10% 90%;
 }
 
 .cols-5-95
@@ -502,7 +548,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:5% 95%;
-    grid-template-columns:5% 95%;    
+    grid-template-columns:5% 95%;
 }
 
 .cols-15-85
@@ -510,7 +556,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:15% 85%;
-    grid-template-columns:15% 85%;    
+    grid-template-columns:15% 85%;
 }
 
 .cols-20-80
@@ -518,7 +564,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:20% 80%;
-    grid-template-columns:20% 80%;    
+    grid-template-columns:20% 80%;
 }
 
 .cols-25-75
@@ -526,7 +572,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:20% 80%;
-    grid-template-columns:20% 80%;    
+    grid-template-columns:20% 80%;
 }
 
 .cols-30-70
@@ -534,7 +580,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:30% 70%;
-    grid-template-columns:30% 70%;    
+    grid-template-columns:30% 70%;
 }
 
 .cols-40-60
@@ -542,7 +588,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:40% 60%;
-    grid-template-columns:40% 60%;    
+    grid-template-columns:40% 60%;
 }
 
 .cols-45-55
@@ -550,7 +596,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:45% 55%;
-    grid-template-columns:45% 55%;    
+    grid-template-columns:45% 55%;
 }
 
 .cols-50-50
@@ -558,7 +604,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:1fr 1fr;
-    grid-template-columns:1fr 1fr;    
+    grid-template-columns:1fr 1fr;
 }
 
 .cols-60-40
@@ -566,7 +612,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:60% 40%;
-    grid-template-columns:60% 40%;    
+    grid-template-columns:60% 40%;
 }
 
 .cols-70-30
@@ -574,7 +620,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:70% 30%;
-    grid-template-columns:70% 30%;    
+    grid-template-columns:70% 30%;
 }
 
 .cols-80-20
@@ -582,7 +628,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:80% 20%;
-    grid-template-columns:80% 20%;    
+    grid-template-columns:80% 20%;
 }
 
 .cols-85-15
@@ -590,7 +636,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:85% 15%;
-    grid-template-columns:85% 15%;    
+    grid-template-columns:85% 15%;
 }
 
 .cols-90-10
@@ -598,7 +644,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:90% 10%;
-    grid-template-columns:90% 10%;    
+    grid-template-columns:90% 10%;
 }
 
 .cols-95-5
@@ -606,7 +652,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:95% 5%;
-    grid-template-columns:95% 5%;    
+    grid-template-columns:95% 5%;
 }
 
 .cols-10-80-10
@@ -614,7 +660,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:10% 80% 10%;
-    grid-template-columns:10% 80% 10%;    
+    grid-template-columns:10% 80% 10%;
 }
 
 .cols-15-70-15
@@ -622,7 +668,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:15% 70% 15%;
-    grid-template-columns:15% 70% 15%;    
+    grid-template-columns:15% 70% 15%;
 }
 
 .cols-20-60-20
@@ -630,7 +676,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:20% 60% 20%;
-    grid-template-columns:20% 60% 20%;    
+    grid-template-columns:20% 60% 20%;
 }
 
 .cols-25-50-25
@@ -646,7 +692,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:30% 40% 30%;
-    grid-template-columns:30% 40% 30%;    
+    grid-template-columns:30% 40% 30%;
 }
 
 .cols-35-30-35
@@ -654,7 +700,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:35% 30% 35%;
-    grid-template-columns:35% 30% 35%;    
+    grid-template-columns:35% 30% 35%;
 }
 
 .cols-40-20-40
@@ -662,7 +708,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:40% 20% 40%;
-    grid-template-columns:40% 20% 40%;    
+    grid-template-columns:40% 20% 40%;
 }
 
 .cols-45-10-45
@@ -670,7 +716,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:45% 10% 45%;
-    grid-template-columns:45% 10% 45%;    
+    grid-template-columns:45% 10% 45%;
 }
 
 .cols-70-15-15
@@ -678,7 +724,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:70% 15% 15%;
-    grid-template-columns:70% 15% 15%;    
+    grid-template-columns:70% 15% 15%;
 }
 
 .one-col
@@ -686,7 +732,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:1fr;
-    grid-template-columns:1fr;    
+    grid-template-columns:1fr;
 }
 
 .two-cols,
@@ -695,7 +741,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:1fr 1fr;
-    grid-template-columns:1fr 1fr;    
+    grid-template-columns:1fr 1fr;
 }
 
 .three-cols
@@ -775,9 +821,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr;
-    grid-template-rows:1fr;    
+    grid-template-rows:1fr;
 }
 
 .two-rows
@@ -785,9 +831,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;      
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr;
-    grid-template-rows:1fr 1fr;    
+    grid-template-rows:1fr 1fr;
 }
 
 .three-rows
@@ -795,7 +841,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr;
 }
@@ -805,7 +851,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr;
 }
@@ -815,7 +861,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:20% 20% 20% 20% 20%;
     grid-template-rows:20% 20% 20% 20% 20%;
 }
@@ -825,7 +871,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -835,7 +881,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -845,7 +891,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -855,7 +901,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -865,7 +911,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
@@ -875,7 +921,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -885,7 +931,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -895,7 +941,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -905,7 +951,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -915,7 +961,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -925,7 +971,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -935,7 +981,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -945,7 +991,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -955,7 +1001,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -965,7 +1011,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -975,7 +1021,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-rows:20% 70% 10%;
-    grid-template-rows:20% 70% 10%;    
+    grid-template-rows:20% 70% 10%;
 }
 
 .rows-10-90
@@ -983,9 +1029,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:10% 90%;
-    grid-template-rows:10% 90%;    
+    grid-template-rows:10% 90%;
 }
 
 .rows-15-85
@@ -993,9 +1039,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:15% 85%;
-    grid-template-rows:15% 85%;    
+    grid-template-rows:15% 85%;
 }
 
 .rows-20-80
@@ -1003,28 +1049,28 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:20% 80%;
-    grid-template-rows:20% 80%;    
+    grid-template-rows:20% 80%;
 }
 
 .rows-25-75
 {
     display:-ms-grid;
-    display:grid;  
+    display:grid;
     -ms-grid-rows:25% 75%;
-    grid-template-rows:25% 75%;    
+    grid-template-rows:25% 75%;
 }
 
 .full-section.rows-25-75
 {
     display:-ms-grid;
-    display:grid;  
+    display:grid;
     -ms-grid-rows:calc((100vh - 60px) * 0.25) auto;
-    grid-template-rows:calc((100vh - 60px) * 0.25) auto;    
+    grid-template-rows:calc((100vh - 60px) * 0.25) auto;
 }
 
-.full-section.rows-25-75 .row-2 
+.full-section.rows-25-75 .row-2
 {
     min-height:calc((100vh - 60px) * 0.75);
 }
@@ -1034,9 +1080,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:30% 70%;
-    grid-template-rows:30% 70%;    
+    grid-template-rows:30% 70%;
 }
 
 .rows-35-65
@@ -1044,9 +1090,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:35% 65%;
-    grid-template-rows:35% 65%;    
+    grid-template-rows:35% 65%;
 }
 
 .rows-40-60
@@ -1054,9 +1100,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:40% 60%;
-    grid-template-rows:40% 60%;    
+    grid-template-rows:40% 60%;
 }
 
 .rows-45-55
@@ -1064,9 +1110,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:45% 55%;
-    grid-template-rows:45% 55%;    
+    grid-template-rows:45% 55%;
 }
 
 .rows-50-50
@@ -1074,9 +1120,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:1fr 1fr;
-    grid-template-rows:1fr 1fr;    
+    grid-template-rows:1fr 1fr;
 }
 
 .rows-55-45
@@ -1084,7 +1130,7 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:55% 45%;
     grid-template-rows:55% 45%;
 }
@@ -1094,9 +1140,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:60% 40%;
-    grid-template-rows:60% 40%;    
+    grid-template-rows:60% 40%;
 }
 
 .rows-65-35
@@ -1104,9 +1150,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:65% 35%;
-    grid-template-rows:65% 35%;    
+    grid-template-rows:65% 35%;
 }
 
 .rows-70-30
@@ -1114,9 +1160,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:70% 30%;
-    grid-template-rows:70% 30%;    
+    grid-template-rows:70% 30%;
 }
 
 .rows-75-25
@@ -1124,9 +1170,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:75% 25%;
-    grid-template-rows:75% 25%;    
+    grid-template-rows:75% 25%;
 }
 
 .rows-80-20
@@ -1134,9 +1180,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:80% 20%;
-    grid-template-rows:80% 20%;    
+    grid-template-rows:80% 20%;
 }
 
 .rows-85-15
@@ -1144,9 +1190,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:85% 15%;
-    grid-template-rows:85% 15%;    
+    grid-template-rows:85% 15%;
 }
 
 .rows-90-10
@@ -1154,9 +1200,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:90% 10%;
-    grid-template-rows:90% 10%;    
+    grid-template-rows:90% 10%;
 }
 
 .rows-5-90-5
@@ -1164,9 +1210,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:5% 90% 5%;
-    grid-template-rows:5% 90% 5%;    
+    grid-template-rows:5% 90% 5%;
 }
 
 .rows-10-80-10
@@ -1174,9 +1220,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:10% 80% 10%;
-    grid-template-rows:10% 80% 10%;    
+    grid-template-rows:10% 80% 10%;
 }
 
 .rows-15-70-15
@@ -1184,9 +1230,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:15% 70% 15%;
-    grid-template-rows:15% 70% 15%;    
+    grid-template-rows:15% 70% 15%;
 }
 
 .rows-20-60-20
@@ -1194,9 +1240,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:20% 60% 20%;
-    grid-template-rows:20% 60% 20%;    
+    grid-template-rows:20% 60% 20%;
 }
 
 .rows-25-50-25
@@ -1204,9 +1250,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:25% 50% 25%;
-    grid-template-rows:25% 50% 25%;    
+    grid-template-rows:25% 50% 25%;
 }
 
 .rows-30-40-30
@@ -1214,9 +1260,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:30% 40% 30%;
-    grid-template-rows:30% 40% 30%;    
+    grid-template-rows:30% 40% 30%;
 }
 
 .rows-35-30-35
@@ -1224,9 +1270,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:35% 30% 35%;
-    grid-template-rows:35% 30% 35;    
+    grid-template-rows:35% 30% 35;
 }
 
 .rows-40-20-40
@@ -1234,9 +1280,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:40% 20% 40%;
-    grid-template-rows:40% 20% 40%;    
+    grid-template-rows:40% 20% 40%;
 }
 
 .rows-50-10-50
@@ -1244,9 +1290,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:50% 10% 50%;
-    grid-template-rows:50% 10% 50%;    
+    grid-template-rows:50% 10% 50%;
 }
 
 .two-column-rows
@@ -1254,9 +1300,9 @@ fieldset label
     display:-ms-grid;
     display:grid;
     -ms-grid-columns:none;
-    grid-template-columns:none;    
+    grid-template-columns:none;
     -ms-grid-rows:60px calc(100% - 60px);
-    grid-template-rows:60px calc(100% - 60px);    
+    grid-template-rows:60px calc(100% - 60px);
 }
 /******************************************************************/
 /****************************** GRID ******************************/
@@ -1285,3 +1331,20 @@ fieldset label
 /*********************************************************************/
 /****************************** BUTTONS ******************************/
 /*********************************************************************/
+.custom-select
+{
+    height: 30px;
+    width: auto;
+    min-width: 300px;
+    font-size: 16px;
+    padding-left: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 1.0);
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-image: url('../images/caret.png');
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
+    background-position: 100% 0px;
+}
