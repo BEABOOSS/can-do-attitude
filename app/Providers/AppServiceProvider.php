@@ -27,5 +27,8 @@ class AppServiceProvider extends ServiceProvider
             define('BASE','http://'.$_SERVER['HTTP_HOST'].'/');
         else
             define('BASE', 'https://'.$_SERVER['HTTP_HOST'].'/');
+
+
+        define('SESSIONTIMEOUT', 90);
     }
 }

@@ -19,11 +19,15 @@
 
 	<div class="container-90">
 
+@if($addItem)
 		<div class="flx-cc mb-40">
 			<a href="administration/{{ $models }}/create">
 				<button class="btn btn-primary">NEW {{ strtoupper($model) }}</button>
 			</a>
-		</div>
+		</div>	
+@endif
+
+
 
 		<div>
 			<div>

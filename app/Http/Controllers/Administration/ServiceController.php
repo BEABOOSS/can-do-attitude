@@ -13,6 +13,7 @@ class ServiceController extends Controller
 	private $model = 'service';
 	private $models = 'services';
 	private $select = array('*', 'service AS title');
+	private $addItem = true;
 
 	public function index()
 	{
@@ -21,6 +22,7 @@ class ServiceController extends Controller
 		View::share('models', $this->models);		
 		View::share('Items', Service::select( $this->select )->get());
 		View::share('Fields', Service::Fields());
+		View::share('addItem', $this->addItem);
 		return view ('administration.items');
 	}
 	

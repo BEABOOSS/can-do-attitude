@@ -15,14 +15,14 @@ class Customer extends BaseModel
      *
      * @var array<int, string>
      */
-    protected $fillable = ['customer','phone_number', 'address', 'customer_margin', 'active'];
+    protected $fillable = ['customer','phone_number', 'address', 'active'];
 
     public function items()
    {
 
       $items = '<div class="three-cols">';
-      
-      $items .= '<div>' . $this->title . '</div>';
+      //  
+      $items .= '<div class="flx-cs">' . $this->title . '</div>';
 
 
       $items .= '<div class="flx-cc">';
@@ -58,19 +58,11 @@ class Customer extends BaseModel
 											'class' 	  => 'must-have-value'],
 															
 									
-									
 					'address' 			=> ['type'    	  => 'input', 
 											'label'  	  => 'address',
 											'placeholder' => 'Enter your address',
 											'obligatory'  => 'obligatory',
-											'class' 	  => 'must-have-value'],
-									
-	              	// 'customer_margin' 	=> ['type' 	  	  => 'button', 
-					// 						'label' 	  => 'Edit Margin',
-					// 						'text' 		  => 'Edit Margin',
-					// 						'default' 	  => '1',
-					// 						'obligatory'  => 'obligatory',
-					// 						'class' 	  => 'must-have-value'],    
+											'class' 	  => 'must-have-value'],   
 	   
 					'active' 		=> ['type' 	 	  => 'boolean', 
 											'label' 	  => 'active',

@@ -1,24 +1,3 @@
-## Instructions
-
-
-
-This [link](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop?platform=windows) will help you understand how to fork a repo and to contribute to it.
-
-
-This [link](https://topherpedersen.blog/2020/07/19/how-to-contribute-code-to-someone-elses-github-repo/) will show you how to download and setup the project for yourself. 
-Also will show you how you can create a new branch when you're working on a new feature.
-
-
-
-
-
-
-
-
-
-
-
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

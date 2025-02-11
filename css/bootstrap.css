@@ -38,9 +38,9 @@ fieldset label
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    -webkit-box-pack:end;
-    -ms-flex-pack:end;
-    justify-content:flex-end;    
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start; 
 }
 
 fieldset input
@@ -57,6 +57,7 @@ fieldset input
     padding:10px;
     margin:10px 0;
 }
+
 
 .rb{border:1px solid red;}
 .gb{border:1px solid green;}
@@ -1317,6 +1318,7 @@ fieldset input
 	color:#fff;
 	border:1px solid black;
 	border-radius:5px;
+    cursor:pointer;
 }
 
 .btn-primary

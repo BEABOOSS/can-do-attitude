@@ -108,6 +108,22 @@ class Field extends Model
             }
             
          } 
+          else if ($name == 'teacherId'){
+
+               foreach( Teacher::active() as $Teacher )
+               {
+                  $select .= '<option value="' . $Teacher->id . '">' . $Teacher->teacher . '</option>';
+               }
+               
+            } 
+          else if ($name == 'computerId'){
+
+               foreach( Computer::active() as $Computer )
+               {
+                  $select .= '<option value="' . $Computer->id . '">' . $Computer->computer . '</option>';
+               }
+               
+            } 
 
          $select .= '</select>';
 

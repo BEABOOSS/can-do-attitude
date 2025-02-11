@@ -13,6 +13,7 @@ class LevelController extends Controller
 	private $model = 'level';
 	private $models = 'levels';
 	private $select = array('*', 'level AS title');
+	private $addItem = true;
 
 	public function __construct()
 	{
@@ -46,7 +47,7 @@ class LevelController extends Controller
 
 		View::share('title', 'Levels');
 		View::share('Items', Level::select( $this->select )->get());
-		
+		View::share('addItem', $this->addItem);
 		return view ('administration.items');
 	}
 	

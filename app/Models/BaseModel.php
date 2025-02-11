@@ -18,7 +18,7 @@ class BaseModel extends Model
 
       $items = '<div class="two-cols">';
       
-      $items .= '<div>' . $this->title . '</div>';
+      $items .= '<div class="flx-cs">' . $this->title . '</div>';
 
       
       $items .= '<div><a href="administration/' . $this->model . '/' . $this->id . '/edit"><button class="btn btn-secondary">EDIT</button></a></div>';   
@@ -29,6 +29,6 @@ class BaseModel extends Model
 
       return $items;
    }
-   
+
    
 }

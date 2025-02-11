@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Administration;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+// use App\Http\Controllers\AdminController;
+
 use App\Models\Customer;
 use View;
 use Redirect;
@@ -14,21 +16,25 @@ class CustomerController extends Controller
 	private $model = 'customer';
 	private $models = 'customers';
 	private $select = array('*', 'customer AS title');
+	private $addItem = true;
+
 
 	public function __construct()
 	{
-		//$this->middleware('auth');
-
+		// $this->middleware('auth');
 		View::share('model', $this->model);
 		View::share('models', $this->models);	
 		View::share('Fields', Customer::Fields());	
 	}
+
 
 	public function index()
 	{
 
 		View::share('title', 'Customers');
 		View::share('Items', Customer::select( $this->select )->get());
+		View::share('addItem', $this->addItem);
+
 		
 		return view ('administration.items');
 	}

@@ -13,6 +13,7 @@ class BookController extends Controller
 	private $model = 'book';
 	private $models = 'books';
 	private $select = array('*', 'name AS title');
+	private $addItem = true;
 
 	public function __construct()
 	{
@@ -38,6 +39,7 @@ class BookController extends Controller
 		// View::share('models', $this->models);
 		View::share('Items', Book::select( $this->select )->get());
 		// View::share('Fields', Book::Fields());
+		View::share('addItem', $this->addItem);
 		return view ('administration.items');
 	}
 	

@@ -47,3 +47,23 @@ header
     -ms-grid-columns:1fr 1fr;
     grid-template-columns:1fr 1fr;    
 }
+
+#sign-in-form, #sign-out-form
+{
+	position: fixed;
+	top: -50vh;
+	left: 30vw;
+	width: 40vw;
+	height: auto;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	z-index: 99;
+	transition: top 0.5s ease;
+
+}
+
+#sign-in-form.active, #sign-out-form.active
+{
+	top: 120px;
+}

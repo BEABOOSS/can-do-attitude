@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Administration;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Company;
+use App\Models\Teacher;
 use View;
 use Redirect;
 
-class CompanyController extends Controller
+class TeacherController extends Controller
 {
-	private $model = 'company';
-	private $models = 'companies';
-	private $select = array('*', 'company AS title');
+	private $model = 'teacher';
+	private $models = 'teachers';
+	private $select = array('*', 'teacher AS title');
 	private $addItem = true;
 
 	public function __construct()
@@ -21,45 +21,44 @@ class CompanyController extends Controller
 
 		View::share('model', $this->model);
 		View::share('models', $this->models);	
-		View::share('Fields', Company::Fields());	
+		View::share('Fields', Teacher::Fields());	
 	}
 
 	public function index()
 	{
 
-		View::share('title', 'Companies');
-		View::share('Items', Company::select( $this->select )->get());
+		View::share('title', 'Teachers');
+		View::share('Items', Teacher::select( $this->select )->get());
 		View::share('addItem', $this->addItem);
-		
 		return view ('administration.items');
 	}
 	
 	public function create()
 	{
-		View::share('title', 'Add Company');
+		View::share('title', 'Add Teacher');
 		return view ('administration.create-item');
 	}
 
 	public function store(Request $request)
 	{
-		Company::create($request->all());		
-		return Redirect::to('administration/companies');
+		Teacher::create($request->all());		
+		return Redirect::to('administration/teachers');
 	}
 
 	public function edit($id)
 	{
-		View::share('title', 'Edit Company');
-		View::share('Item', Company::find($id));
+		View::share('title', 'Edit Teacher');
+		View::share('Item', Teacher::find($id));
 
 		return view ('administration.edit-item');
 	}
 
 	public function update(Request $request)
 	{
-		$Make = Company::find($request->id);
-		$Make->update($request->all());
+		$Teacher= Teacher::find($request->id);
+		$Teacher->update($request->all());
 
-		return Redirect::to('administration/companies');
+		return Redirect::to('administration/teachers');
 	}		    
 }
 

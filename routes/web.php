@@ -6,6 +6,7 @@ use App\Http\Controllers\Item\BookController;
 use App\Http\Controllers\Item\LevelController;
 use App\Http\Controllers\Service\ServiceController;
 use App\Http\Controllers\Administration\AdministrationController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,9 @@ Route::get('books',[BookController::class,'index'])->name('books');
 
 Route::get('levels',[LevelController::class,'index'])->name('levels');
 Route::get('level/books/{id}',[LevelController::class,'levelBooks']);
+Route::get('login', [LoginController::class, 'login'])->name('login');
+Route::post('login', [LoginController::class, 'doLogin']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 

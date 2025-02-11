@@ -9,11 +9,14 @@ use App\Http\Controllers\Controller;
 
 class AdministrationController extends Controller
 {
+
+
 	public function index()
 	{
 		View::share('title', 'Administration');
 		return view ('administration.administration');
 	}
+	
 	
     
 }

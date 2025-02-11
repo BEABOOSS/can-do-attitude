@@ -13,6 +13,7 @@ class MakeController extends Controller
 	private $model = 'make';
 	private $models = 'makes';
 	private $select = array('*', 'make AS title');
+	private $addItem = true;
 
 	public function __construct()
 	{
@@ -27,25 +28,26 @@ class MakeController extends Controller
 	{
 
 
-		$Makes = Make::get();
+		// $Makes = Make::get();
 
-		foreach($Makes as $Make)
-		{
+		// foreach($Makes as $Make)
+		// {
 
-			echo $Make->make . '<br>';
+		// 	echo $Make->make . '<br>';
 
-			foreach($Make->Cars as $Car)
-			{
-				echo $Car->brand . '<br>';
-			}
-			echo '<br>';
+		// 	foreach($Make->Cars as $Car)
+		// 	{
+		// 		echo $Car->brand . '<br>';
+		// 	}
+		// 	echo '<br>';
 
-		}
+		// }
 
-		die();
+		// die();
 
 		View::share('title', 'Makes');
 		View::share('Items', Make::select( $this->select )->get());
+		View::share('addItem', $this->addItem);
 		
 		return view ('administration.items');
 	}

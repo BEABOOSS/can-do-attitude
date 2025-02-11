@@ -16,6 +16,7 @@ class CustomerMarginController extends Controller
 	private $model = 'customer-margin';
 	private $models = 'customer-margins';
 	private $select = array('*', 'customer AS title');
+	private $addItem = true;
 
 	public function __construct()
 	{
@@ -40,9 +41,18 @@ class CustomerMarginController extends Controller
 
 		// die();
 
+		$Items = View::share('Items', CustomerMargin::where('customer_id', Session::get('CustomerId'))
+			                                        ->select( $this->select )
+			                                        ->get());
+
+		if ( count($Items) > 0 ) { $this->addItem = false; }
+
+		//echo count($Items) . ' ' . $this->addItem;
+		//die();
 
 		View::share('title', 'Customer Margin');
-		View::share('Items', CustomerMargin::where('customer_id', Session::get('CustomerId') )->select( $this->select )->get());
+		View::share('Items', $Items);
+		View::share('addItem', $this->addItem);
 		
 		return view ('administration.items');
 	}

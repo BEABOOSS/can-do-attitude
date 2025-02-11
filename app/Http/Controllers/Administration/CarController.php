@@ -13,6 +13,7 @@ class CarController extends Controller
 	private $model = 'car';
 	private $models = 'cars';
 	private $select = array('*', 'brand AS title');
+	private $addItem = true;
 
 	public function index()
 	{
@@ -28,6 +29,7 @@ class CarController extends Controller
 		View::share('models', $this->models);
 		View::share('Items', Car::select( $this->select )->get());
 		View::share('Fields', Car::Fields());
+		View::share('addItem', $this->addItem);
 		return view ('administration.items');
 	}
 	
